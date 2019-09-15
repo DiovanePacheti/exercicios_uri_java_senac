@@ -7,7 +7,7 @@ package br.com.uri.exercicios;
 
 /**
  *
- * @author angela
+ * @author diovane
  */
 public class BrComUriExercicios {
 
