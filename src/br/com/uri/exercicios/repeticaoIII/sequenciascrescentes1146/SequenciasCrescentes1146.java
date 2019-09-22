@@ -33,7 +33,7 @@ public class SequenciasCrescentes1146 {
 
     public static void main(String[] args) {
         
-        //declarando variavel do tipo primitivo inteira
+        //declarando variaveis, 
         int valorx = 0;
         String concatenandoValores = "";
         String formandoSaida;
@@ -43,35 +43,49 @@ public class SequenciasCrescentes1146 {
         Scanner scan = new Scanner(System.in);
         
         /* - do white - estrutura de repetição que vai repitir executando 
-        o bloco e depois efetuando o teste de comparação */
+        o bloco e depois efetuando o teste logico*/
         do{
         
           //System.out.println("Digite o valor da variavel x : ");
             valorx = scan.nextInt();
             
-            
+            //se(valorc for igual a zero)
             if(valorx == 0){
+              //sair recebe verdadeiro
                 sair =true;
-            }else{    
+            //senao    
+            }else{ 
+                //variavel concatenandoValores recebe ela mais valorx concatenado com virgula
                 concatenandoValores += valorx+",";
             }    
-                
+        //enquanto sair for não sair         
         }while(!sair); 
         
+      //vetor de String que vai armazenar a sequencia de concatenada por virgula separando em posiçoes no vetor 
         String[] listaDeValores = concatenandoValores.split(",");
                 
-        /*estrutura for que */      
+        /*estrutura for */      
         for(int i = 0;i<listaDeValores.length;i++){ 
           
+          //variavel local que vai receber o conteudo armazenado no vetor na posição 'i'
             String valor = listaDeValores[i];
      
             //limpando a variavel 
             formandoSaida =  " ";
+           //variavel local int que vai receber a conversão do conteudo de String para number tipo primitivo int 
             int num = Integer.parseInt(valor);
+            // segundo for que vai repeir a sequencia de 1 ate o valor digitado na posição encontrado no for superior
             for(int j = 1;j<=num;j++){
+                // gerando a saida 
                 formandoSaida += j + " ";
             }//fim do for j
             
+          /*formatando a saida pro URI 
+            com .substring(primeiro parametro acessamos a posição '1' 
+            por que a '0' contem um espaço vazio, depois o segundo parametro
+            com .length() obtemos a valor do tamanho do array e subtraimos '1'
+            para eliminarmos a ultima posição que tambem armazena um espaço vazio)
+          */
             System.out.println(formandoSaida.substring(1, formandoSaida.length() -1));
         
         }//fim do for i
