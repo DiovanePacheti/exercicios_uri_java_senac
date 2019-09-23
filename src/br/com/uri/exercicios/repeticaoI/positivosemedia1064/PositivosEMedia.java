@@ -27,7 +27,7 @@ import java.util.Scanner;
  * @author diovane
  */
 public class PositivosEMedia {
-    
+   //com erro de apresentação 
     public static void main(String[] args) {
         
         //declarndo variaveis
